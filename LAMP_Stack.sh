@@ -107,7 +107,7 @@ az group create \
 
 #ANCHOR - create a ubuntu 22.04 vm
 az vm create \
-    --resource-group lamp-group \
+    --resource-group $resource_group_name \
     --name $vm_name \
     --image Ubuntu2204 \
     --generate-ssh-keys \
