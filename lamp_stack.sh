@@ -129,18 +129,18 @@ az network nsg rule create \
     --destination-port-ranges 22 \
     --access Allow
 
-#ANCHOR - create nsg rule to open HTTPS port 443
+#ANCHOR - create nsg rule to open HTTP port 80
 az network nsg rule create \
     --resource-group $resource_group_name \
     --nsg-name $nsg_name \
-    --name AllowHTTPS \
+    --name AllowHTTP \
     --protocol Tcp \
     --direction Inbound \
     --priority 150 \
     --source-address-prefix "*" \
     --source-port-range "*" \
     --destination-address-prefix "*" \
-    --destination-port-ranges 443 \
+    --destination-port-ranges 80 \
     --access Allow
 
 #ANCHOR - wait for vm deploy
