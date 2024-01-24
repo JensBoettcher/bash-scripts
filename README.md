@@ -1,3 +1,5 @@
+**lamp-stack-cli-script**
+
 This script automates the process of deploying a LAMP (Linux, Apache, MySQL, PHP) stack on an Azure virtual machine.
 
 Script steps:
