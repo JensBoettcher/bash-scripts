@@ -6,7 +6,7 @@ Script steps:
 3. Checks for valid Azure resource group name, VM name, and admin username.
 4. Creates a resource group in 'germanywestcentral'.
 5. Creates a Ubuntu 22.04 VM with the specified name and admin username.
-6. Creates Network Security Group (NSG) rules to open SSH port 22 and HTTP port 443.
+6. Creates Network Security Group (NSG) rules to open SSH port 22 and HTTP port 80.
 7. Waits for VM deployment to succeed.
 8. Shows the public IP of the VM.
 9. Connects to the VM via SSH and installs Apache, MySQL, and PHP.
