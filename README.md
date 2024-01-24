@@ -1,9 +1,29 @@
-This LAMP stack bash script requires only 4 inputs.
-1. you must log into your azure subscription
-2. you must enter your resource group name (Azure policies must be consider)
-3. your vm name must be entered (Azure policies must be consider)
-4. and you need a admin-user-name (Azure policies must also be consider)
+This script automates the process of deploying a LAMP (Linux, Apache, MySQL, PHP) stack on an Azure virtual machine.
 
-After you’ve entered all the necessary information, the script will run fully automated through the bash script. It will end up logged in on the VM and you can start configuring your Ubuntu 22.04 LTS server with Apache2, MySQL, and PHP.
+Script steps:
+1. Logs into Azure account.
+2. Prompts user for resource group name, VM name, and admin username.
+3. Checks for valid Azure resource group name, VM name, and admin username.
+4. Creates a resource group in 'germanywestcentral'.
+5. Creates a Ubuntu 22.04 VM with the specified name and admin username.
+6. Creates Network Security Group (NSG) rules to open SSH port 22 and HTTP port 443.
+7. Waits for VM deployment to succeed.
+8. Shows the public IP of the VM.
+9. Connects to the VM via SSH and installs Apache, MySQL, and PHP.
+10. Connects to the VM for user interaction.
 
-!!!The fingerprint query for the SSH connection will be automatically accepted. I’ve only done this for bash script testing. I would never do this in daily business.!!!"
+Usage
+- Ensure you have Azure CLI installed on your machine.
+- Run the script in your terminal: ./lamp_stack.sh
+- Follow the prompts to enter your resource group name, VM name, and admin username.
+- Wait for the script to complete the deployment.
+
+Once the script completes, it will output the public IP of the VM. You can use this IP to access your newly deployed LAMP stack.
+
+Note
+This script automates the fingerprint confirmation for SSH connections. This is generally not recommended for security reasons. Please use this feature responsibly.
+
+Requirements
+Azure CLI
+Bash shell
+This script is intended to be run in a Bash shell. If you're using a different shell (like Zsh), you may need to switch to Bash before running this script.
